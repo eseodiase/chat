@@ -20,6 +20,7 @@
     --shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.0477);
   }
   
+  /*Desktop View*/
     html, body{
       margin: 0;
       padding: 0;
@@ -48,7 +49,7 @@
     
     .corner-left{
       background: purple;
-      left: -10.98rem;
+      left: -10rem;
       bottom: 6rem;
       position: fixed;
       border-radius: 0 0 1000px 1000px;
@@ -56,7 +57,7 @@
     
     .corner-right{
       background: pink;
-      right: -14rem;
+      right: -12.625rem;
       top: 6rem;
       position: fixed;
       border-radius: 1000px 1000px 0 0;
@@ -109,12 +110,12 @@
     /**/
     .phone-case .phone-screen .top-screen .ang{
       margin-block-start: 12px;
-      margin-inline-start: -78px;
+      margin-inline-start: -98px;
       position: absolute;
     }
     
     .phone-case .phone-screen .top-screen .cir{
-      margin-inline-start: -62px;
+      margin-inline-start: -80px;
     }
     
     .phone-case .phone-screen .top-screen .txt{
@@ -126,33 +127,36 @@
       width: 26px;
       height: 26px;
       background: #111;
+      background-image: url(./avatar-jessica.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
       border-radius: 50px;
       border: 1px solid #ffffff;
     }
     
     .phone-case .phone-screen .top-screen .dots{
       margin-block-start: 12px;
-      margin-inline-start: 72px;
+      margin-inline-start: 90px;
       position: absolute;
     }
     
     .phone-case .phone-screen .top-screen .txt .p1{
       margin-block-start: 10px;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 14px;
     }
     
      .phone-case .phone-screen .top-screen .txt .p2{
       margin-block-start: -12px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 400;
     }
     
      .phone-case .phone-screen .left-chat {
       text-align: left;
       background: pink;
-      border-radius: 10px 10px 10px 2px;
-      width: 150px;
+      border-radius: 12px 12px 12px 3px;
+      width: 140px;
       margin-inline: 8px;
       margin-block: 8px;
       padding-inline: 1px;
@@ -162,28 +166,33 @@
     .phone-case .phone-screen .left-chat p {
       margin-inline: 10px;
       margin-block: 10px;
-      font-size: 10px;
+      font-size: 9px;
       color: purple;
     }
     
     .phone-case .phone-screen .images {
-      margin-inline-start: 70px;
-      margin-block-start: 15px;
+      max-width: 280px;
+      margin-inline-start: 114px;
+      margin-inline-end: 8px;
+      margin-block-start: 14px;
+      margin-block-end: -4px;
     }
 
     .phone-case .phone-screen img {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: 10px;
       background: red;
+      margin-inline-start: 4px;
     }
     
     .phone-case .phone-screen .right-chat {
       text-align: left;
       background: #ffffff;
-      border-radius: 10px 10px 2px 10px;
-      width: 150px;
-      margin-inline-start: 104px;
+      border-radius: 12px 12px 3px 12px;
+      max-width: 280px;
+      margin-inline-start: 128px;
+      margin-inline-end: 8px;
       margin-block-start: 8px;
       margin-block-end: 8px;
       padding-inline: 1px;
@@ -191,21 +200,23 @@
     }
 
     .phone-case .phone-screen #chat-2 {
-      width: 110px;
-      margin-inline-start: 144px;
+      max-width: 280px;
+      margin-inline-start: 176px;
+      margin-inline-end: 8px;
+      margin-block-end: 14px;
     }
 
     .phone-case .phone-screen .right-chat p {
       margin-inline: 10px;
       margin-block: 10px;
-      font-size: 11px;
+      font-size: 9px;
     }
     
     .phone-case .phone-screen .price {
       text-align: left;
       background: purple;
-      border-radius: 10px 10px 10px 2px;
-      width: 174px;
+      border-radius: 12px 12px 12px 3px;
+      width: 168px;
       height: 34px;
       margin-inline: 8px;
       margin-block: 8px;
@@ -215,7 +226,7 @@
     .phone-case .phone-screen .price > div {
       display: inline-block;
       color: #ffffff;
-      margin-block-start: -9.6px;
+      margin-block-start: -10px;
     }
     
     .phone-case .phone-screen .price .txt {
@@ -227,11 +238,11 @@
     .phone-case .phone-screen .price .fig {
       font-size: 16px;
       font-weight: 700;
-      margin-inline-start: 30px;
+      margin-inline-start: 26px;
     }
 
     .phone-case .phone-screen .price #fig-2 {
-      margin-inline-start: 53px;
+      margin-inline-start: 48px;
     }
     
     .phone-case .phone-screen .price .cir {
@@ -242,17 +253,21 @@
     }
     
     .phone-case .phone-screen input {
-      min-width: 240px;
+      min-width: 262px;
       height: 35px;
       outline: none;
       background: #ffffff;
-      color: #c0c0c0;
       border: none;
       border-radius: 50px;
-      padding-inline-start: 30px;
+      padding-inline-start: 25px;
       margin-block-start: 8px;
       margin-block-end: 12px;
       margin-inline-start: -6px;
+    }
+    
+    .phone-case .phone-screen input::placeholder {
+      color: #c0c0c0;
+      font-size: 10px;
     }
     
     .phone-case .phone-screen button{
@@ -263,12 +278,14 @@
       border: none;
       border-radius: 50px;
       color: #ffffff;
+      font-size: 15px;
+
       margin-inline-start: -36px;
     }
    
     article{
       text-align: left;
-      max-width: 28rem;
+      max-width: 26.6rem;
       margin-inline-start: 6.25rem;
       align-self: center;
     }
@@ -281,6 +298,24 @@
       font-size: 1rem;
     }
     
+    /*Tablet View*/
+     @media (max-width: 900px){
+    .corner-left, .corner-right{
+      min-width: 56.4%;
+    }
+    
+    .container{
+      margin-inline: 8px;
+    }
+     
+    article {
+      max-width: 22rem;
+      margin-inline-start: 2.8rem;
+    }
+  
+    }
+    
+    /*Mobile View*/
     @media (max-width: 480px){
     .corner-left, .corner-right{
       display: block;
@@ -298,7 +333,7 @@
       border-radius: 0 0 1000px 50px;
     }
     
-    .corner-right-display{
+    .corner-right-for-mobile-view{
       bottom: 0;
       right: -5.625rem;
       min-width: 76%;
@@ -308,6 +343,10 @@
       margin-bottom: 0;
       background: pink;
       z-index: -1;
+    }
+    
+    .container {
+      margin-inline: auto;
     }
     
     .phone-case{
@@ -320,35 +359,35 @@
     }
     
     .phone-case .phone-screen .top-screen .white-path{
-      margin-inline-start: 3.2rem;
+      margin-inline: 3.2rem;
     }
-
+ 
     .phone-case .phone-screen .top-screen .ang {
-      margin-inline-start: -65px;
+      margin-inline-start: -72px;
     }
     
     .phone-case .phone-screen .top-screen .cir {
-      margin-inline-start: -50px;
+      margin-inline-start: -58px;
     }
     
     .phone-case .phone-screen .top-screen .dots {
-      margin-inline-start: 60px;
+      margin-inline-start: 68px;
     }
     
     .phone-case .phone-screen .images {
-      margin-inline-start: 45px;
+      margin-inline-start: 85px;
     }
     
     .phone-case .phone-screen .right-chat {
-      margin-inline-start: 90px;
+      margin-inline-start: 98px;
     }
 
     .phone-case .phone-screen #chat-2 {
-      margin-inline-start: 130px;
+      margin-inline-start: 150px;
     }
     
     .phone-case .phone-screen input {
-        width: 234px;
+      min-width: 236px;
     }
 
     article {
@@ -358,6 +397,7 @@
     }
     
     }
+    
     
   </style>
 </head>
@@ -397,9 +437,9 @@
         </div>
         
         <div class="images">
-        <img src="" alt="dog1"/>
-        <img src="" alt="dog2"/>
-        <img src="" alt="dog3"/>
+        <img src="avatar-jessica.jpeg" alt="dog1"/>
+        <img src="avatar-jessica.jpeg" alt="dog2"/>
+        <img src="avatar-jessica.jpeg" alt="dog3"/>
         </div>
         
         <div class="right-chat">
@@ -410,7 +450,7 @@
         <p>Can you make it?</p>
         </div>
         
-         <div class="left-chat">
+        <div class="left-chat">
         <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
         </div>
         
@@ -435,8 +475,8 @@
         </div>
         
         <form class="search">
-          <input type="search" value="type a message...">
-          <button type="submit">⟩</button>
+          <input type="search" placeholder="type a message...">
+          <button type="submit"><b>&rsaquo;</b></button>
         </form>
          
        </div>
@@ -450,9 +490,9 @@
      </article>
      </div>
      
-     <div class="corner-right-display"></div>
+     <div class="corner-right-for-mobile-view"></div>
      
    </section>
  </main>
 </body>
-  </html>
+</html>

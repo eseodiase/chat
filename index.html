@@ -42,6 +42,7 @@
     --submit-btn: hsl(271, 36%, 24%);
     --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
     --placeholder-txt: hsl(206, 6%, 79%);
+    --radio-outline: 1px solid hsl(289, 100%, 72%);
     --article-heading: hsl(271, 36%, 24%);
   }
   
@@ -244,7 +245,7 @@
     
     .phone-case .phone-screen .price {
       text-align: left;
-      background: var(--gradient-to-right);
+      background: var(--gradient-to-left);
       border-radius: 12px 12px 12px 3px;
       width: 168px;
       height: 34px;
@@ -259,30 +260,49 @@
       margin-block-start: -10px;
     }
     
-    .phone-case .phone-screen .price .txt {
-      font-size: 10px;
-      font-weight: 450;
-      margin-inline-start: 5px;
-    }
-
-    .phone-case .phone-screen .price .fig {
-      font-size: 16px;
-      font-weight: 700;
-      margin-inline-start: 26px;
-    }
-
-    .phone-case .phone-screen .price #fig-2 {
-      margin-inline-start: 48px;
+    .phone-case .phone-screen .price .radio{
+      z-index: 999;
+      opacity: 0;
+      position: absolute;
+      margin-block-start: -1.5px;
     }
     
     .phone-case .phone-screen .price .cir {
-      width: 10px;
-      height: 10px;
+      width: 15px;
+      height: 15px;
       border-radius: 50px;
-      border: 0.5px solid #ffffff;
+      border: var(--radio-outline);
+      position: absolute;
+      margin-inline-start: 4.5px;
+      margin-block-start: -2px;
     }
     
-    .phone-case .phone-screen input {
+    .phone-case .phone-screen .price label{
+      margin-inline-start: 28px;
+    }
+    
+    .phone-case .phone-screen .price .radio:checked ~ .cir{
+      background: var(--white);
+      cursor: pointer;
+    }
+    
+    .phone-case .phone-screen .price .txt {
+      font-size: 10px;
+      font-weight: 450;
+      margin-inline-start: -5px;
+    }
+    
+    .phone-case .phone-screen .price .fig {
+      font-size: 16px;
+      font-weight: 700;
+      margin-inline-start: 28px;
+    }
+    
+    .phone-case .phone-screen .price #fig-2 {
+      margin-inline-start: 44px;
+    }
+    
+    .phone-case .phone-screen input[type="text"] {
       min-width: 218px;
       height: 35px;
       outline: none;
@@ -295,7 +315,7 @@
       margin-inline-start: -6px;
     }
     
-    .phone-case .phone-screen input::placeholder {
+    .phone-case .phone-screen .msg::placeholder {
       color: var(--placeholder-txt);
       font-size: 10px;
     }
@@ -311,6 +331,7 @@
       font-size: 15px;
 
       margin-inline-start: -36px;
+      cursor: pointer;
     }
    
     article{
@@ -338,12 +359,16 @@
       min-width: 56.4%;
     }
     
-    .phone-case{
+    .container{
+      margin-inline: 8px;
+    }
+    
+    .phone-case {
       margin-inline: 0;
     }
     
-    .container{
-      margin-inline: 8px;
+    .phone-case .phone-screen .price .radio:checked ~ .cir:hover, button {
+      cursor: none;
     }
      
     article {
@@ -425,7 +450,11 @@
       margin-inline-start: 150px;
     }
     
-    .phone-case .phone-screen input {
+    .phone-case .phone-screen .price .radio:checked ~ .cir:hover, button {
+      cursor: none;
+    }
+    
+    .phone-case .phone-screen input[type="text"] {
       min-width: 208px;
     }
 
@@ -436,7 +465,9 @@
     }
     
     }
-    
+    .attribution {
+      display: none;
+    }
     
   </style>
 </head>
@@ -493,28 +524,30 @@
         <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
         </div>
         
+
+        
+        <form class="get_started">
          <div class="price">
-           <div class="cir"></div>
-           <div class="txt">
-             <p>30 minutes walk</p>
+          <div class="txt">
+           <input type="radio" class="radio" name="price" value="30_minutes" /><span class="cir"></span>
+           <label>30 minute walk</label>
            </div>
-           <div class="fig">
-             <p>$29</p>
-           </div>
-        </div>
-        
-        <div class="price">
-           <div class="cir"></div>
-           <div class="txt">
-           <p>1 hour walk</p>
-           </div>
-           <div class="fig" id="fig-2">
-             <p>$49</p>
-           </div>
-        </div>
-        
-        <form class="search">
-          <input type="text" placeholder="type a message...">
+          <div class="fig">
+           <p>$29</p>
+          </div>
+         </div>
+   
+         <div class="price">
+         <div class="txt">
+          <input type="radio" class="radio" name="price" value="1_hour" /><span class="cir"></span>
+          <label>1 hour walk</label>
+         </div>
+         <div class="fig" id="fig-2">
+          <p>$49</p>
+         </div>
+         </div>
+          
+          <input type="text" class="msg" placeholder="type a message...">
           <button type="submit"><b>&rsaquo;</b></button>
         </form>
          
@@ -532,6 +565,11 @@
      <div class="corner-right-for-mobile-view"></div>
      
    </section>
+   
+   <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Ese Odiase</a>
+</div>
  </main>
 </body>
 </html>

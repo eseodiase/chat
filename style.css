@@ -292,7 +292,7 @@
     }
     
     .phone-case .phone-screen input[type="text"] {
-      min-width: 13.625rem;
+      min-width: 84%;
       height: 2.1875rem;
       outline: none;
       background: var(--white);
@@ -342,9 +342,9 @@
     }
     
     /* breakpoint 1 */
-    @media (min-width: 23.4375rem){
+    @media (min-width: 37.5rem){
     .phone-case {
-      margin-inline: 13.4rem;
+      margin-inline: 16rem;
     }
     }
     

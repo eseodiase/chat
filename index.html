@@ -14,33 +14,37 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
-  
 </head>
 
 <body>
  <main>
-   <section>
-     <div class="corner-left"></div>
-     <div class="corner-right"></div>
+   <section class="wrapper" aria-describedby="app__username">
+     <div class="wrapper__left-design" role="presentation"></div>
+     <div class="wrapper__right-design" role="presentation"></div>
      
-     <div class="container">
-     <div class="phone-case">
-       <div class="phone-screen">
+     <div class="app">
+     <div class="app__container">
+       <div class="app__screen">
          
-         <div class="top-screen">
-           <div class="white-path"></div>
+         <div class="app__top-screen">
+           <div class="app__top-design"></div>
+          
+          <div class="app__user-info">
+           <div class="app__backward-icon">
+             <p><b>&lsaquo;</b></p>
+           </div>
            
-           <div class="ang">
-             <b>&lsaquo;</b></div>
-           <div class="cir"></div>
+           <img src="avatar.jpg" alt="Samuel Green avatar" loading="eager" class="cir"/>
            
            <div class="txt">
-             <p class="p1">Samuel Green</p>
+             <h2 class="p1" id="app__username">Samuel Green</h2>
              <p class="p2">Available to walk</p>
            </div>
            
            <div class="dots">
-             <b>&vellip;</b></div>
+             <p><b>&vellip;</b></p>
+             </div>
+          </div>   
          </div>
          
          <div class="left-chat">
@@ -52,16 +56,16 @@
         </div>
         
         <div class="images">
-        <img src="avatar-jessica.jpeg" alt="dog1"/>
-        <img src="avatar-jessica.jpeg" alt="dog2"/>
-        <img src="avatar-jessica.jpeg" alt="dog3"/>
+        <img src="dog-image-1.jpg" alt="dog1 image" loading="lazy"/>
+        <img src="dog-image-2.jpg" alt="dog2 image" loading="lazy"/>
+        <img src="dog-image-3.jpg" alt="dog3 image" loading="lazy"/>
         </div>
         
         <div class="right-chat">
         <p>Here are a few pictures, she's a happy girl.</p>
         </div>
 
-        <div class="right-chat" id="chat-2">
+        <div class="right-chat">
         <p>Can you make it?</p>
         </div>
         
@@ -69,12 +73,10 @@
         <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
         </div>
         
-
-        
         <form class="get_started">
          <div class="price">
           <div class="txt">
-           <input type="radio" class="radio" name="price" value="$29" /><span class="cir"></span>
+           <input type="radio" class="radio" name="price" value="$29" /><span class="circ"></span>
            <label>30 minute walk</label>
            </div>
           <div class="fig">
@@ -84,7 +86,7 @@
    
          <div class="price">
          <div class="txt">
-          <input type="radio" class="radio" name="price" value="$49" /><span class="cir"></span>
+          <input type="radio" class="radio" name="price" value="$49" /><span class="circ"></span>
           <label>1 hour walk</label>
          </div>
          <div class="fig" id="fig-2">
@@ -93,7 +95,7 @@
          </div>
           
           <input type="text" class="msg" placeholder="type a message...">
-          <button type="submit"><b>&rsaquo;</b></button>
+          <button type="submit" aria-label="send message" aria-pressed="false"><b>&rsaquo;</b></button>
         </form>
          
        </div>
@@ -107,14 +109,12 @@
      </article>
      </div>
      
-     <div class="corner-right-for-mobile-view"></div>
-     
    </section>
-   
-   <div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-  Coded by <a href="#">Ese Odiase</a>
-</div>
  </main>
+ 
+  <footer class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+     Coded by <a href="#">Ese Odiase</a></p>
+  </footer>
 </body>
 </html>

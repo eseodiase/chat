@@ -305,53 +305,63 @@
       color: var(--right_chat_color);
     }
     
-    /* Breakpoint for medium devices */
-    @media (min-width: 37.5rem) {
-    .wrapper__left-design,
-    .wrapper__right-design {
-      height: 100vh;
-      min-width: calc(100% - 25vw);
+    /* Breakpoint for smaller devices */
+    @media (max-width: 20rem) {
+    .app {
+      margin-inline: 20px;
+    }
     }
     
-    .app {
-      margin-inline: 210px;
-    }
+    /* Breakpoint for medium devices */
+    @media (min-width: 37.5rem) {
+
+      .wrapper__left-design,
+      .wrapper__right-design {
+        height: 100vh;
+        min-width: calc(100% - 25vw);
+      }
+      
+      .app {
+        margin-inline: 180px;
+      }
     }
     
     /* Breakpoint for large devices */
     @media (min-width: 48rem) {
-    .wrapper__left-design,
-    .wrapper__right-design {
-      height: 100vh;
-      min-width: calc(100% - 60vw);
+
+      .wrapper__left-design,
+      .wrapper__right-design {
+        height: 100vh;
+        min-width: calc(100% - 60vw);
+      }
+      
+      .wrapper__right-design {
+        right: -16rem;
+        top: 8rem;
+        opacity: 0.04;
+      }
+      
+      .app {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-inline: 120px;
+        margin-block: 0;
+      }
+      
+      .app__container {
+        margin-inline: 45px;
+      }
+      
+      .cir,
+      .txt {
+        margin-inline-start: -14px;
+      }
+      
+      article {
+        text-align: left;
+        align-self: center;
+        margin-inline: 45px;
+        width: 425px;
+      }
     }
-    
-    .wrapper__right-design {
-      right: -16rem;
-      top: 8rem;
-      opacity: 0.04;
-    }
-    
-    .app {
-      flex-direction: row;
-      align-items: flex-start;
-      margin-inline: 120px;
-      margin-block: 0;
-    }
-    
-    .app__container {
-      margin-inline: 45px;
-    }
-    
-    .cir, .txt{
-      margin-inline-start: -14px;
-    }
-    
-    article {
-      text-align: left;
-      align-self: center;
-      margin-inline: 45px;
-    }
-    }
-    
     

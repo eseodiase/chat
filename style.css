@@ -63,7 +63,7 @@
     .wrapper__left-design{
       background: var(--gradient_to_bottom_right);
       left: -9.7rem;
-      bottom: 10rem;
+      bottom: 10.4rem;
       position: fixed;
       border-radius: 0 0 1500px 1500px;
     }
@@ -359,7 +359,7 @@
       
       .wrapper__right-design {
         right: -16rem;
-        top: 10rem;
+        top: 10.4rem;
         opacity: 0.04;
       }
       
@@ -371,7 +371,7 @@
       }
       
       .app__container {
-        margin-inline: 34px;
+        margin-inline: 35px;
         width: 240px;
       }
       
@@ -383,11 +383,16 @@
       article {
         text-align: left;
         align-self: center;
-        margin-inline: 34px;
-        width: 445px;
+        margin-inline: 35px;
+        max-width: 450px;
       }
     }
     
+    @media (min-width: 62rem) {
+      article {
+        width: 450px;
+      }
+    }
 
     
 

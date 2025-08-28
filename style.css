@@ -366,12 +366,12 @@
       .app {
         flex-direction: row;
         align-items: flex-start;
-        margin-inline: 120px;
+        margin-inline: 80px;
         margin-block: 0;
       }
       
       .app__container {
-        margin-inline: 25px;
+        margin-inline: 35px;
         max-width: 230px;
       }
       
@@ -383,20 +383,24 @@
       article {
         text-align: left;
         align-self: center;
-        margin-inline: 25px;
+        margin-inline: 35px;
         max-width: 450px;
       }
     }
     
     @media (min-width: 75rem) {
+      .app {
+        margin-inline: 140pc;
+      }
+      
       .app__container {
-        margin-inline: 70px;
+        margin-inline: 50px;
         width: 230px;
       }
       
       article {
         width: 450px;
-        margin-inline: 70px;
+        margin-inline: 50px;
       }
     }
     

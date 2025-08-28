@@ -63,7 +63,7 @@
     .wrapper__left-design{
       background: var(--gradient_to_bottom_right);
       left: -9.7rem;
-      bottom: 8rem;
+      bottom: 10rem;
       position: fixed;
       border-radius: 0 0 1500px 1500px;
     }
@@ -350,7 +350,7 @@
     }
     
     /* Breakpoint for large devices */
-    @media (min-width: 62rem) {
+    @media (min-width: 48rem) {
       .wrapper__left-design,
       .wrapper__right-design {
         height: 100vh;
@@ -359,7 +359,7 @@
       
       .wrapper__right-design {
         right: -16rem;
-        top: 8rem;
+        top: 10rem;
         opacity: 0.04;
       }
       
@@ -371,7 +371,7 @@
       }
       
       .app__container {
-        margin-inline: 45px;
+        margin-inline: 34px;
         width: 240px;
       }
       
@@ -383,8 +383,8 @@
       article {
         text-align: left;
         align-self: center;
-        margin-inline: 45px;
-        width: 450px;
+        margin-inline: 34px;
+        width: 445px;
       }
     }
     

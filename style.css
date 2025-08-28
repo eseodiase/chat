@@ -307,31 +307,52 @@
     
     /* Breakpoint for smaller devices */
     @media (max-width: 20rem) {
+    .wrapper__left-design,
+    .wrapper__right-design {
+      min-width: calc(100% - 0.5vw);
+    }
+    
     .app {
       margin-inline: 20px;
+    }
+    
+    .cir, 
+    .txt {
+      margin-inline-start: -50px;
+    }
+    }
+    
+    /* Breakpoint for small devices */
+    @media (min-width: 23.44rem) {
+    .wrapper__left-design,
+    .wrapper__right-design {
+      min-width: calc(100% - 6vw);
+    }
+    }
+    
+    @media (min-width: 25.69rem) {
+    .wrapper__left-design,
+    .wrapper__right-design {
+      min-width: calc(100% - 8.2vw);
     }
     }
     
     /* Breakpoint for medium devices */
     @media (min-width: 37.5rem) {
-
       .wrapper__left-design,
       .wrapper__right-design {
-        height: 100vh;
         min-width: calc(100% - 25vw);
       }
       
       .app {
-        margin-inline: 180px;
+        margin-inline: 48px;
       }
     }
     
     /* Breakpoint for large devices */
     @media (min-width: 48rem) {
-
       .wrapper__left-design,
       .wrapper__right-design {
-        height: 100vh;
         min-width: calc(100% - 60vw);
       }
       
@@ -365,3 +386,6 @@
       }
     }
     
+
+    
+

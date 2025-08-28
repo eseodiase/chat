@@ -390,17 +390,17 @@
     
     @media (min-width: 75rem) {
       .app {
-        margin-inline: 8.75rem;
+        margin-inline: 11.25rem;
       }
       
       .app__container {
-        margin-inline: 35px;
+        margin-inline: 45px;
         width: 230px;
       }
       
       article {
         width: 450px;
-        margin-inline: 35px;
+        margin-inline: 45px;
       }
     }
     

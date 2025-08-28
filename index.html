@@ -5,116 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>HTML</title>
+  <title>React</title>
   
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- Load React globally (UMD) -->
+<script src="https://unpkg.com/react@17.0.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.1/umd/react-dom.development.js"></script>
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
+<!-- Then load SystemJS -->
+<script src="https://unpkg.com/systemjs@6.12.1/dist/system.js"></script>
+<script src="https://unpkg.com/systemjs@6.12.1/dist/extras/use-default.js"></script>
+<script src="https://unpkg.com/systemjs-plugin-babel@0.0.25/plugin-babel.js"></script>
+<script src="https://unpkg.com/systemjs-babel-build@0.0.25/systemjs-babel-browser.js"></script>
+  
+  <!-- React -->
+  <script src="//unpkg.com/systemjs@0.19.47/dist/system.js"></script>
+  
+  <link href="src/style.css" rel="stylesheet">
+  
 </head>
 
 <body>
- <main>
-   <section class="wrapper" aria-describedby="app__username">
-     <div class="wrapper__left-design" role="presentation"></div>
-     <div class="wrapper__right-design" role="presentation"></div>
-     
-     <div class="app">
-     <div class="app__container">
-       <div class="app__screen">
-         
-         <div class="app__top-screen">
-           <div class="app__top-design"></div>
-          
-          <div class="app__user-info">
-           <div class="app__backward-icon">
-             <p><b>&lsaquo;</b></p>
-           </div>
-           
-           <img src="avatar.jpg" alt="Samuel Green avatar" loading="eager" class="cir"/>
-           
-           <div class="txt">
-             <h2 class="p1" id="app__username">Samuel Green</h2>
-             <p class="p2">Available to walk</p>
-           </div>
-           
-           <div class="dots">
-             <p><b>&vellip;</b></p>
-             </div>
-          </div>   
-         </div>
-         
-         <div class="left-chat">
-           <p>That sounds great. I'd be happy with that.</p>
-         </div>
-         
-         <div class="left-chat">
-          <p>Could you send over some pictures of your dog, please?</p>
-        </div>
-        
-        <div class="images">
-        <img src="dog-image-1.jpg" alt="dog1 image" loading="lazy"/>
-        <img src="dog-image-2.jpg" alt="dog2 image" loading="lazy"/>
-        <img src="dog-image-3.jpg" alt="dog3 image" loading="lazy"/>
-        </div>
-        
-        <div class="right-chat">
-        <p>Here are a few pictures, she's a happy girl.</p>
-        </div>
-
-        <div class="right-chat">
-        <p>Can you make it?</p>
-        </div>
-        
-        <div class="left-chat">
-        <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
-        </div>
-        
-        <form class="get_started">
-         <div class="price">
-          <div class="txt">
-           <input type="radio" class="radio" name="price" value="$29" /><span class="circ"></span>
-           <label>30 minute walk</label>
-           </div>
-          <div class="fig">
-           <p>$29</p>
-          </div>
-         </div>
-   
-         <div class="price">
-         <div class="txt">
-          <input type="radio" class="radio" name="price" value="$49" /><span class="circ"></span>
-          <label>1 hour walk</label>
-         </div>
-         <div class="fig" id="fig-2">
-          <p>$49</p>
-         </div>
-         </div>
-          
-          <input type="text" class="msg" placeholder="type a message...">
-          <button type="submit" aria-label="send message" aria-pressed="false"><b>&rsaquo;</b></button>
-        </form>
-         
-       </div>
-     </div>
-     
-     <article>
-       <div>
-         <h1>Simple booking</h1>
-         <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the work has been completed you can rate your walker and book again all through the chat.</p>
-       </div>
-     </article>
-     </div>
-     
-   </section>
- </main>
- 
-  <footer class="attribution">
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-     Coded by <a href="#">Ese Odiase</a></p>
-  </footer>
+  <div id="root"></div>
+  <!-- Project -->
+  <script src="config.js"></script>
 </body>
 </html>

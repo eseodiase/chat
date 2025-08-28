@@ -326,14 +326,14 @@
     @media (min-width: 23.44rem) {
     .wrapper__left-design,
     .wrapper__right-design {
-      min-width: calc(100% - 7vw);
+      min-width: calc(100% - 6.5vw);
     }
     }
     
     @media (min-width: 25.69rem) {
     .wrapper__left-design,
     .wrapper__right-design {
-      min-width: calc(100% - 9.5vw);
+      min-width: calc(100% - 9vw);
     }
     }
     
@@ -345,7 +345,7 @@
       }
       
       .app {
-        margin-inline: 120px;
+        margin-inline: 7.5rem;
       }
     }
     
@@ -366,7 +366,7 @@
       .app {
         flex-direction: row;
         align-items: flex-start;
-        margin-inline: 80px;
+        margin-inline: 5rem;
         margin-block: 0;
       }
       
@@ -390,7 +390,7 @@
     
     @media (min-width: 75rem) {
       .app {
-        margin-inline: 140pc;
+        margin-inline: 8.75rem;
       }
       
       .app__container {

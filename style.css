@@ -53,7 +53,7 @@
     .wrapper__left-design,
     .wrapper__right-design{
       height: 100vh;
-      min-width: calc(100% - 5vw);
+      min-width: calc(100% - 6vw);
       margin: 0;
       padding: 0;
       display: inline-flex;
@@ -326,14 +326,14 @@
     @media (min-width: 23.44rem) {
     .wrapper__left-design,
     .wrapper__right-design {
-      min-width: calc(100% - 4vw);
+      min-width: calc(100% - 7vw);
     }
     }
     
     @media (min-width: 25.69rem) {
     .wrapper__left-design,
     .wrapper__right-design {
-      min-width: calc(100% - 7.2vw);
+      min-width: calc(100% - 9.5vw);
     }
     }
     
@@ -350,7 +350,7 @@
     }
     
     /* Breakpoint for large devices */
-    @media (min-width: 48rem) {
+    @media (min-width: 62rem) {
       .wrapper__left-design,
       .wrapper__right-design {
         height: 100vh;
@@ -384,7 +384,7 @@
         text-align: left;
         align-self: center;
         margin-inline: 45px;
-        width: 435px;
+        width: 450px;
       }
     }
     

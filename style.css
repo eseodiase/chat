@@ -63,7 +63,7 @@
     .wrapper__left-design{
       background: var(--gradient_to_bottom_right);
       left: -9.7rem;
-      bottom: 9.4rem;
+      bottom: 8.4rem;
       position: fixed;
       border-radius: 0 0 1500px 1500px;
     }
@@ -359,7 +359,7 @@
       
       .wrapper__right-design {
         right: -16rem;
-        top: 9.4rem;
+        top: 8.4rem;
         opacity: 0.04;
       }
       
@@ -394,7 +394,7 @@
       }
       
       .app__container {
-        margin-inline-start: 150px;
+        margin-inline-start: 140px;
         margin-inline-end: 65px;
         width: 225px;
       }

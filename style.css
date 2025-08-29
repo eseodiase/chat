@@ -384,7 +384,7 @@
         text-align: left;
         align-self: center;
         margin-inline: 35px;
-        max-width: 450px;
+        max-width: 455px;
       }
     }
     
@@ -394,7 +394,8 @@
       }
       
       .app__container {
-        margin-inline: 45px;
+        margin-inline-start: 90px;
+        margin-inline-end: 45px;
         width: 230px;
       }
       

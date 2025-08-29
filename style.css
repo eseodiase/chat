@@ -395,13 +395,13 @@
       
       .app__container {
         margin-inline-start: 160px;
-        margin-inline-end: 70px;
-        width: 230px;
+        margin-inline-end: 60px;
+        width: 225px;
       }
       
       article {
         width: 450px;
-        margin-inline: 70px;
+        margin-inline: 60px;
       }
     }
     

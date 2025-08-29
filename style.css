@@ -394,14 +394,14 @@
       }
       
       .app__container {
-        margin-inline-start: 110px;
-        margin-inline-end: 50px;
+        margin-inline-start: 140px;
+        margin-inline-end: 70px;
         width: 230px;
       }
       
       article {
-        width: 455px;
-        margin-inline: 50px;
+        width: 460px;
+        margin-inline: 70px;
       }
     }
     

@@ -372,7 +372,7 @@
       
       .app__container {
         margin-inline: 35px;
-        max-width: 230px;
+        max-width: 225px;
       }
       
       .cir,
@@ -395,13 +395,13 @@
       
       .app__container {
         margin-inline-start: 140px;
-        margin-inline-end: 65px;
+        margin-inline-end: 60px;
         width: 225px;
       }
       
       article {
         width: 450px;
-        margin-inline: 65px;
+        margin-inline: 60px;
       }
     }
     

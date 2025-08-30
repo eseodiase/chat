@@ -1,120 +1,410 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>HTML</title>
   
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
+  <title></title>
+  
+  <style>
+        /* Author: Ese Odiase */
+    
+    /* Google font, Manrope */
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+    
+    /* Share/forward icon TrueType Font */
+    @font-face {
+      font-family: 'fontello';
+      src: url('./fontello.ttf?79544687') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    /* Custom CSS property */
+    :root {
+      /* Colors */
+      --very-dark--grayish-blue: hsl(217, 19%, 35%);
+      --desaturated-dark-blue: hsl(214, 17%, 51%);
+      --grayish-blue: hsl(212, 23%, 69%);
+      --light-grayish-blue: hsl(210, 46%, 95%);
+      
+      /* Nuteral */
+      --footer-anchor-color: hsl(228, 45%, 44%);
+      --white: hsl(0, 100%, 100%);
+      
+      /* Margins & padding */
+      --no-padding: 0;
+      --padding-8: 0.5rem;
+      --padding-10-24: 0.64rem;
+      --padding-40: 2.5rem;
+      --no-margin: 0;
+      --margin-25: 1.5625rem;
+      --margin-30: 1.875rem;
+      --margin-120: 7.5rem;
+      --margin-negative-6: -0.375rem;
+      --margin-negative-6-56: -0.41rem;
+      --margin-negative-28-8: -1.8rem;
+      
+      /* Custom inline margin for viewport width */
+      --custom-viewport-12: -12vw;
+      --custom-viewport-15: -15vw;
+      --custom-viewport-56: -56vw;
+      
+      /* Heights & weights */
+      --viewport-height-100: 100vh;
+      --width-100-percent: 100%;
+      --height-35: 2.1875rem;
+      --height-200: 12.5rem;
+      --height-340: 21.25rem;
+      --height-360: 22.25rem;
+      --width-35: 2.1875rem;
+      --width-328: 20.5rem;
+      --width-600:  37.5rem;
+      
+      /* Font sizes */
+      --primary-font: 0.9rem;
+      --heading-18: 1.125rem;
+      --heading-20: 1.25rem;
+      --heading-24: 1.5rem;
+      --author-name: 0.875rem;
+      --share-font: 13px;
+      --footer-font: calc (0.6875rem + 0.2vw);
+      
+      /* Border */
+      --mobile-article-radius: 0 0 10px 10px;
+      --mobile-img-radius: 10px 10px 0 0;
+      --desktop-article-radius: 0 14px 14px 0;
+      --desktop-img-radius: 14px 0 0 14px;
+      --radius8: 8px;
+      --radiu50: 50%;
+    }
+    
+    /* Mobile first workflow */
+    html,
+    body {
+      margin: var(--no-margin);
+      padding: var(--no-padding);
+      background: var(--light-grayish-blue);
+      font-size: var(--primary-font);
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--desaturated-dark-blue);
+      font-family: 'Manrope', sans-serif;
+    }
+    
+    .header {
+      display: none;
+    }
+    
+    .main {
+      min-height: var(--viewport-height-100);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    .component {
+      margin-inline: var(--margin-25);
+    }
+    
+    .component__heading {
+      display: none;
+    }
+    
+    .component__img {
+      border-radius: var(--mobile-img-radius);
+      height: var(--height-200);
+      width: var(--width-328);
+    }
+    
+    .component__article {
+      background: var(--white);
+      border-radius: var(--mobile-article-radius);
+      margin-block-start: var(--margin-negative-28-8);
+      width: var(--width-328);
+    }
+    
+    .component__article-heading {
+      padding-block-start: var(--padding-40);
+      font-size: var(--heading-18);
+      color: var(--very-dark--grayish-blue);
+      font-weight: 700;
+      margin-block-end: var(--margin-negative-6);
+    }
+    
+    .component__article-text {
+      margin-block-end: var(--margin-30);
+    }
+    
+    .component__article-heading,
+    .component__article-text,
+    .component__author-info {
+      margin-inline: var(--margin-25);
+    }
+    
+    .component__author-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-block-end: var(--padding-8);
+    }
+    
+    .component__author-img {
+      border-radius: var(--radiu50);
+    }
+    
+    .component__author-more {
+      margin-inline-start: var(--custom-viewport-12);
+    }
+    
+    .component__author-name {
+      font-size: var(--author-name);
+      line-height: 0.4;
+      color: var(--very-dark--grayish-blue);
+      font-weight: 700;
+    }
+    
+    .component__date {
+      line-height: 0.4;
+      color: var(--grayish-blue);
+    }
+    
+    .component__share-button {
+      height: var(--height-35);
+      width: var(--height-35);
+      border-radius: var(--radiu50);
+      outline: none;
+      border: none;
+      align-self: center;
+      z-index: 999;
+      background: var(--light-grayish-blue);
+    }
+    
+    .component__share-button-toggle {
+      background: var(--grayish-blue);
+      color: var(--white);
+      border-radius: var(--radiu50);
+      padding: var(--padding-10-24);
+      margin-inline-start: var(--margin-negative-6-56);
+    }
+    
+    .component__share-icon {
+      font-family: "fontello";
+      font-weight: 700;
+    }
+    
+    .component__share-icon:before { content: '\e800'; 
+    }
+    
+    .social-icon {
+      padding-inline: 25px;
+      padding-block: 10px;
+      width: 247px;
+      background: var(--very-dark--grayish-blue);
+      display: flex;
+      align-items: center;
+      margin-block-start: -66px;
+      border-radius: var(--mobile-article-radius);
+      display: none;
+    }
+    
+    .social-icon__toggle {
+      display: flex;
+    }
+    
+    .social-icon__heading {
+      color: var(--grayish-blue);
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      align-items: flex-start;
+      font-size: var(--share-font);
+    }
+    
+    .social-icon__link {
+      align-self: center;
+      line-height: 0;
+      padding-inline: 8px;
+    }
+    
+    /* Breakpoint for medium devices */
+    @media (min-width: 37.5rem) {
+    .component__img {
+      height: var(--height-340);
+      width: var(--width-100-percent);
+    }
+    
+    .component__article {
+      width: auto;
+    }
+    
+    .component__article-heading {
+     font-size: var(--heading-20);
+   }
+    
+    .component__author-more {
+      margin-inline-start: var(--custom-viewport-56);
+    }
+    
+    .social-icon {
+      width: 86.8%;
+    }
+    
+    .social-icon__link {
+      padding-inline: 18px;
+    }
+    }
+    
+    /* Breakpoint for large devices */
+    @media (min-width: 48rem) {
+    .component {
+      display: flex;
+      flex-direction: row;
+      margin-inline: var(--margin-120);
+    }
+      
+    .component__img {
+      border-radius: var(--desktop-img-radius);
+        height: var(--height-360);
+    }
+      
+    .component__article {
+      border-radius: var(--desktop-article-radius);
+        height: var(--height-360);
+        width: var(--width-600);
+        margin-block: var(--no-margin);
+    }
+    
+    .component__article-heading {
+      font-size: var(--heading-24);
+    }
+    
+    .component__author-more {
+      margin-inline-start: var(--custom-viewport-15);
+    }
+    
+    .component__share-button {
+      cursor: pointer;
+    }
+    
+    .social-icon {
+      position: absolute;
+      max-width: 185px;
+      padding-block: 5px;
+      right: 30px;
+      bottom: 45.5%;
+      border-radius: var(--radius8);
+      justify-content: space-between;
+    }
+    
+    /* Speech bubble tail */
+    .social-icon::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 10px solid var(--very-dark--grayish-blue);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      bottom: -10px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    
+    .social-icon__link {
+      padding-inline: 10px;
+      cursor: pointer;
+    }
+    }
+    
+    .footer {
+      clear: both;
+      font-size: var(--footer-font);
+      text-align: center;
+      display: none;
+    }
+    
+    .footer a {
+      color: var(--footer-anchor-color)
+    }
+    
+  </style>
 </head>
 
 <body>
- <main>
-   <section class="wrapper" aria-describedby="app__username">
-     <div class="wrapper__left-design" role="presentation"></div>
-     <div class="wrapper__right-design" role="presentation"></div>
-     
-     <div class="app">
-     <div class="app__container">
-       <div class="app__screen">
-         
-         <div class="app__top-screen">
-           <div class="app__top-design"></div>
+  <header class="header">
+    <h1 class="header__heading" aria-hidden="true">Article Preview Component</h1>
+  </header>
+  
+  <main class="main" id="main">
+    
+    <section class="component">
+      <h2 class="component__heading" aria-hidden="true">Component</h2>
+      
+      <picture class="component__picture">
+        <source srcset="drawers.avif" type="image/avif" />
+        <source srcset="drawers.webp" type="image/webp" />
+        <img src="drawers.jpg" alt="Drawer Image" loading="eager" class="component__img" />
+      </picture>
+      
+      <article class="component__article">
+        <h2 class="component__article-heading">
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+        </h2>
+        
+        <p class="component__article-text">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
+        
+        <div class="component__author-info">
+          <img src="avatar-michelle.jpg" width="45" height="45" alt="Michelle avatar" loading="lazy" class="component__author-img" />
           
-          <div class="app__user-info">
-           <div class="app__backward-icon">
-             <p><b>&lsaquo;</b></p>
-           </div>
-           
-           <img src="avatar.jpg" alt="Samuel Green avatar" loading="eager" class="cir"/>
-           
-           <div class="txt">
-             <h2 class="p1" id="app__username">Samuel Green</h2>
-             <p class="p2">Available to walk</p>
-           </div>
-           
-           <div class="dots">
-             <p><b>&vellip;</b></p>
-             </div>
-          </div>   
-         </div>
-         
-         <div class="left-chat">
-           <p>That sounds great. I'd be happy with that.</p>
-         </div>
-         
-         <div class="left-chat">
-          <p>Could you send over some pictures of your dog, please?</p>
-        </div>
-        
-        <div class="images">
-        <img src="dog-image-1.jpg" alt="dog1 image" loading="lazy"/>
-        <img src="dog-image-2.jpg" alt="dog2 image" loading="lazy"/>
-        <img src="dog-image-3.jpg" alt="dog3 image" loading="lazy"/>
-        </div>
-        
-        <div class="right-chat">
-        <p>Here are a few pictures, she's a happy girl.</p>
-        </div>
-
-        <div class="right-chat">
-        <p>Can you make it?</p>
-        </div>
-        
-        <div class="left-chat">
-        <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
-        </div>
-        
-        <form class="get_started">
-         <div class="price">
-          <div class="txt">
-           <input type="radio" class="radio" name="price" value="$29" /><span class="circ"></span>
-           <label>30 minute walk</label>
-           </div>
-          <div class="fig">
-           <p>$29</p>
+          <div class="component__author-more">
+            <h3 class="component__author-name">Michelle Appleton</h3>
+            
+            <p class="component__date">28 Jun 2020</p>
           </div>
-         </div>
-   
-         <div class="price">
-         <div class="txt">
-          <input type="radio" class="radio" name="price" value="$49" /><span class="circ"></span>
-          <label>1 hour walk</label>
-         </div>
-         <div class="fig" id="fig-2">
-          <p>$49</p>
-         </div>
-         </div>
           
-          <input type="text" class="msg" placeholder="type a message...">
-          <button type="submit" aria-label="send message" aria-pressed="false"><b>&rsaquo;</b></button>
-        </form>
-         
-       </div>
-     </div>
-     
-     <article>
-       <div>
-         <h1>Simple booking</h1>
-         <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the work has been completed you can rate your walker and book again all through the chat.</p>
-       </div>
-     </article>
-     </div>
-     
-   </section>
- </main>
- 
-  <footer class="attribution">
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-     Coded by <a href="#">Ese Odiase</a></p>
-  </footer>
+          
+          <button type="button" aria-label="Toggle social media share options" aria-pressed="false" class="component__share-button">
+            <span class="component__share-icon"></span>
+          </button>
+        </div>
+      </article>
+    </section>
+    
+    
+    <section class="social-icon">
+      <h3 class="social-icon__heading">Share</h3>
+      <a href="#" class="social-icon__link social-icon__link--facebook" aria-label="Share on Facebook">
+        <img src="icon-facebook.svg" alt="Facebook icon" loading="lazy" />
+      </a>
+      <a href="#" class="social-icon__link social-icon__link--twitter" aria-label="Share on Twitter">
+        <img src="icon-twitter.svg" alt="Twitter icon" loading="lazy" />
+      </a>
+      <a href="#" class="social-icon__link social-icon__link--pinterest" aria-label="Share on Pinterest">
+        <img src="icon-pinterest.svg" alt="Pinterest icon" loading="lazy" />
+      </a>
+    </section>
+    
+  </main>
+  
+  <script>
+  function socialShare() {
+    const main = document.getElementById('main');
+    let share__button = main.querySelector('.component__share-button');
+    
+    share__button.addEventListener('click', () => {
+  let social__icon = main.querySelector('.social-icon').classList.toggle('social-icon__toggle')
+});
+}
+socialShare();
+  </script>
 </body>
+
 </html>

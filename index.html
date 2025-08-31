@@ -8,7 +8,11 @@
   <title></title>
   
   <style>
-        /* Author: Ese Odiase */
+    /* 
+    Author: Ese Odiase
+    GitHub: github.com/eseodiase
+    LinkedIn: https://ng.linkedin.com/in/ese-g-odiase-220576196
+    */
     
     /* Google font, Manrope */
     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
@@ -46,11 +50,6 @@
       --margin-negative-6-56: -0.41rem;
       --margin-negative-28-8: -1.8rem;
       
-      /* Custom inline margin for viewport width */
-      --custom-viewport-12: -12vw;
-      --custom-viewport-15: -15vw;
-      --custom-viewport-56: -56vw;
-      
       /* Heights & weights */
       --viewport-height-100: 100vh;
       --width-100-percent: 100%;
@@ -64,7 +63,7 @@
       
       /* Font sizes */
       --primary-font: 0.9rem;
-      --heading-18: 1.125rem;
+      --heading-18: 1.11rem;
       --heading-20: 1.25rem;
       --heading-24: 1.5rem;
       --author-name: 0.875rem;
@@ -152,12 +151,13 @@
       padding-block-end: var(--padding-8);
     }
     
-    .component__author-img {
-      border-radius: var(--radiu50);
+    .component__author-profile {
+      display: flex;
     }
     
-    .component__author-more {
-      margin-inline-start: var(--custom-viewport-12);
+    .component__author-img {
+      border-radius: var(--radiu50);
+      margin-inline-end: var(--margin-25);
     }
     
     .component__author-name {
@@ -244,10 +244,6 @@
      font-size: var(--heading-20);
    }
     
-    .component__author-more {
-      margin-inline-start: var(--custom-viewport-56);
-    }
-    
     .social-icon {
       width: 86.8%;
     }
@@ -281,22 +277,22 @@
       font-size: var(--heading-24);
     }
     
-    .component__author-more {
-      margin-inline-start: var(--custom-viewport-15);
-    }
-    
     .component__share-button {
       cursor: pointer;
     }
     
+    .el {
+
+    }
+    
     .social-icon {
-      position: absolute;
+      position: relative;
       max-width: 185px;
       padding-block: 5px;
-      right: 30px;
-      bottom: 45.5%;
       border-radius: var(--radius8);
       justify-content: space-between;
+      left: 343px;
+      bottom: 66px;
     }
     
     /* Speech bubble tail */
@@ -314,13 +310,12 @@
     }
     
     .social-icon__link {
-      padding-inline: 10px;
+      padding-inline: 8px;
       cursor: pointer;
     }
     }
     
     .footer {
-      clear: both;
       font-size: var(--footer-font);
       text-align: center;
       display: none;
@@ -362,12 +357,14 @@
         </p>
         
         <div class="component__author-info">
+          <div class="component__author-profile">
           <img src="avatar-michelle.jpg" width="45" height="45" alt="Michelle avatar" loading="lazy" class="component__author-img" />
           
           <div class="component__author-more">
             <h3 class="component__author-name">Michelle Appleton</h3>
             
             <p class="component__date">28 Jun 2020</p>
+          </div>
           </div>
           
           
@@ -378,7 +375,7 @@
       </article>
     </section>
     
-    
+    <div class="el">
     <section class="social-icon">
       <h3 class="social-icon__heading">Share</h3>
       <a href="#" class="social-icon__link social-icon__link--facebook" aria-label="Share on Facebook">
@@ -391,6 +388,7 @@
         <img src="icon-pinterest.svg" alt="Pinterest icon" loading="lazy" />
       </a>
     </section>
+    </div>
     
   </main>
   

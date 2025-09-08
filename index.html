@@ -45,7 +45,8 @@
       --no-margin: 0;
       --margin-25: 1.5625rem;
       --margin-30: 1.875rem;
-      --margin-120: 7.5rem;
+      --margin-80: 5rem;
+      --margin-150: 9.375rem;
       --margin-negative-6: -0.375rem;
       --margin-negative-6-56: -0.41rem;
       --margin-negative-28-8: -1.8rem;
@@ -206,7 +207,8 @@
       background: var(--very-dark--grayish-blue);
       display: flex;
       align-items: center;
-      margin-block-start: -66px;
+      margin-block-start: -8px;
+      position: absolute;
       border-radius: var(--mobile-article-radius);
       display: none;
     }
@@ -258,7 +260,7 @@
     .component {
       display: flex;
       flex-direction: row;
-      margin-inline: var(--margin-120);
+      margin-inline: var(--margin-80);
     }
       
     .component__img {
@@ -269,7 +271,8 @@
     .component__article {
       border-radius: var(--desktop-article-radius);
         height: var(--height-360);
-        width: var(--width-600);
+        max-width: var(--width-600);
+        max-width: 500px;
         margin-block: var(--no-margin);
     }
     
@@ -281,18 +284,15 @@
       cursor: pointer;
     }
     
-    .el {
-
-    }
-    
     .social-icon {
       position: relative;
-      max-width: 185px;
+      width: 185px;
       padding-block: 5px;
       border-radius: var(--radius8);
       justify-content: space-between;
-      left: 343px;
-      bottom: 66px;
+      margin-inline-end: -16%;
+      margin-block-start: -12%;
+      float: right;
     }
     
     /* Speech bubble tail */
@@ -312,6 +312,16 @@
     .social-icon__link {
       padding-inline: 8px;
       cursor: pointer;
+    }
+    
+    .component__author-info {
+      clear: both;
+    }
+    }
+    
+   @media (min-width: 75rem) {
+     .component {
+       margin-inline: var(--margin-150);
     }
     }
     
@@ -356,6 +366,19 @@
           to help you make any room feel complete.
         </p>
         
+                        <section class="social-icon">
+                  <h3 class="social-icon__heading">Share</h3>
+                  <a href="#" class="social-icon__link social-icon__link--facebook" aria-label="Share on Facebook">
+                    <img src="icon-facebook.svg" alt="Facebook icon" loading="lazy" />
+                  </a>
+                  <a href="#" class="social-icon__link social-icon__link--twitter" aria-label="Share on Twitter">
+                    <img src="icon-twitter.svg" alt="Twitter icon" loading="lazy" />
+                  </a>
+                  <a href="#" class="social-icon__link social-icon__link--pinterest" aria-label="Share on Pinterest">
+                    <img src="icon-pinterest.svg" alt="Pinterest icon" loading="lazy" />
+                  </a>
+                </section>
+        
         <div class="component__author-info">
           <div class="component__author-profile">
           <img src="avatar-michelle.jpg" width="45" height="45" alt="Michelle avatar" loading="lazy" class="component__author-img" />
@@ -375,20 +398,6 @@
       </article>
     </section>
     
-    <div class="el">
-    <section class="social-icon">
-      <h3 class="social-icon__heading">Share</h3>
-      <a href="#" class="social-icon__link social-icon__link--facebook" aria-label="Share on Facebook">
-        <img src="icon-facebook.svg" alt="Facebook icon" loading="lazy" />
-      </a>
-      <a href="#" class="social-icon__link social-icon__link--twitter" aria-label="Share on Twitter">
-        <img src="icon-twitter.svg" alt="Twitter icon" loading="lazy" />
-      </a>
-      <a href="#" class="social-icon__link social-icon__link--pinterest" aria-label="Share on Pinterest">
-        <img src="icon-pinterest.svg" alt="Pinterest icon" loading="lazy" />
-      </a>
-    </section>
-    </div>
     
   </main>
   
